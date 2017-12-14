@@ -6,7 +6,7 @@ machine:
   test:
     override:
       - mvn clean install
-      - cp *.war /tmp/hsperfdata_ubuntu/
+      - cp *.war $CIRCLE_ARTIFACTS/json_output
   general:
     artifacts:
       - "target/"
