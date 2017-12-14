@@ -6,6 +6,7 @@ machine:
   test:
     override:
       - mvn clean install
+      - pwd
       - mkdir $CIRCLE_ARTIFACTS/target
       - cp target/*.war $CIRCLE_ARTIFACTS/target/
   general:
