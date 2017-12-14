@@ -8,7 +8,7 @@ machine:
       - mvn clean install
       - pwd
       - mkdir $CIRCLE_ARTIFACTS/target
-      - cp circleproject2/target/*.war $CIRCLE_ARTIFACTS/target/
+      - cp circleproject2/target/*.war $CIRCLE_ARTIFACTS/target/teste.war
   general:
     artifacts:
       - "target/"
