@@ -6,7 +6,8 @@ machine:
   test:
     override:
       - mvn clean install
-      - cp *.war $CIRCLE_ARTIFACTS/json_output
+      - mkdir $CIRCLE_ARTIFACTS/target
+      - cp target/*.war $CIRCLE_ARTIFACTS/target/
   general:
     artifacts:
       - "target/"
