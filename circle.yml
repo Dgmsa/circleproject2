@@ -4,11 +4,10 @@ machine:
   timezone: America/Sao_Paulo # Set the timezone
 
   test:
-    override:
+    post:
       - mvn clean install
-      - pwd
       - mkdir $CIRCLE_ARTIFACTS/target
-      - cp circleproject2/target/*.war $CIRCLE_ARTIFACTS/target/teste.war
+      - mv target/*.war $CIRCLE_ARTIFACTS/target
   general:
     artifacts:
       - "target/"
