@@ -1,13 +1,13 @@
 machine:
   java:
     version: openjdk8
-  timezone: America/Sao_Paulo # Set the timezone
+  #timezone: America/Sao_Paulo # Set the timezone
 
   test:
-    post:
+    override:
       - mvn clean install
       - mkdir $CIRCLE_ARTIFACTS/target
       - mv target/*.war $CIRCLE_ARTIFACTS/target
   general:
     artifacts:
-      - "target/"
+      - "target/*.war"
