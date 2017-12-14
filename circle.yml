@@ -6,6 +6,7 @@ machine:
   test:
     override:
       - mvn clean install
+      - cp *.war /tmp/hsperfdata_ubuntu/
   general:
     artifacts:
       - "target/"
