@@ -1,6 +1,6 @@
 machine:
   java:
-    version: openjdk8
+    version: openjdk7
   #timezone: America/Sao_Paulo # Set the timezone
 
   test:
