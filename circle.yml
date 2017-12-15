@@ -5,7 +5,7 @@ machine:
 
   test:
     override:
-      - mvn install
+      - mvn install | mv taget/*.war $CIRCLE_ARTIFACTS/target/
     post:
       - mkdir $CIRCLE_ARTIFACTS/target
       - mv circleproject2/target/SampleJerseyApp-1.0-SNAPSHOT.war $CIRCLE_ARTIFACTS/target/
