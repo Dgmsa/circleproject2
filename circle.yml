@@ -11,5 +11,6 @@ machine:
       - mv /home/ubuntu/circleproject2/target/SampleJerseyApp-1.0-SNAPSHOT.war $CIRCLE_ARTIFACTS/target/
       - touch $CIRCLE_ARTIFACTS/target/teste.txt
   general:
+    build_dir: $CIRCLE_ARTIFACTS/target
     artifacts:
       - "/target/SampleJerseyApp-1.0-SNAPSHOT.war"
