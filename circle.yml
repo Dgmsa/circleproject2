@@ -12,4 +12,4 @@ machine:
       #- touch $CIRCLE_ARTIFACTS/target/teste.txt
   general:
     artifacts:
-      - "target/*.war"
+      - "./target/SampleJerseyApp-1.0-SNAPSHOT.war"
