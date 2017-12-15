@@ -2,19 +2,19 @@ machine:
   java:
     version: openjdk8
   timezone: America/Sao_Paulo # Set the timezone
-  environment:
-    CIRCLE_ARTIFACTS: target/
+  #environment:
+  #  CIRCLE_ARTIFACTS: target/
 
 
   test:
     override:
       - mvn install
-    post:
-      - mkdir $CIRCLE_ARTIFACTS/target
-      - mv target/SampleJerseyApp-1.0-SNAPSHOT.war $CIRCLE_ARTIFACTS/target/
+    #post:
+      #- mkdir $CIRCLE_ARTIFACTS/target
+      #- mv target/SampleJerseyApp-1.0-SNAPSHOT.war $CIRCLE_ARTIFACTS/target/
       #- mv /home/ubuntu/circleproject2/target/SampleJerseyApp-1.0-SNAPSHOT.war $CIRCLE_ARTIFACTS/target/
       #- touch $CIRCLE_ARTIFACTS/target/teste.txt
       #
 general:
   artifacts:
-    - "target/*.war"
+    - "target/"
